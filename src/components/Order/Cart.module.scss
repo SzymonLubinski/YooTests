@@ -1,0 +1,25 @@
+
+.cart{
+  width: 100%;
+
+  &__list{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__total{
+    margin: 0 10%;
+    text-align: right;
+
+    & span{
+      font-size: 2em;
+    }
+  }
+}
+
+

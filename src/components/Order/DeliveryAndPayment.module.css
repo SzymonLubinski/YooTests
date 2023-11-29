@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+}
+
+.form {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.form__btnContainer {
+  height: 40px;
+  margin-top: 20px;
+}
+.form__btnContainer label {
+  font-size: 18px;
+  color: goldenrod;
+  border: 2px solid goldenrod;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.form__btnContainer input {
+  display: none;
+}
+
+.payment {
+  height: 300px;
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid black;
+}
+
+/*# sourceMappingURL=DeliveryAndPayment.module.css.map */

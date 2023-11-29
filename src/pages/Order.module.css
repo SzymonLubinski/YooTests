@@ -1,0 +1,56 @@
+.center {
+  width: 90%;
+}
+
+.nav {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+.container__order {
+  width: 70%;
+}
+.container__next {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 30%;
+  margin: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .center {
+    width: 100%;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .container__order {
+    width: 100%;
+  }
+  .container__next {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 0;
+    width: 100%;
+    margin: 0;
+  }
+  .container__next div {
+    width: 50%;
+    margin: 5px;
+  }
+  .container__next button {
+    color: black !important;
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=Order.module.css.map */

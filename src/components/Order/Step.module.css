@@ -1,0 +1,47 @@
+.step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  width: 25%;
+  height: 80px;
+  opacity: 0.5;
+  border-bottom: 3px solid black;
+}
+.step__title {
+  margin: 0 5px;
+}
+.step__num {
+  margin: 0 5px;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+
+.active {
+  color: deeppink;
+  border-color: deeppink;
+  opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .step {
+    width: 33%;
+    font-size: 14px;
+  }
+  .circle {
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/*# sourceMappingURL=Step.module.css.map */

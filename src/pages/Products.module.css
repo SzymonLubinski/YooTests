@@ -1,0 +1,26 @@
+.container {
+  width: 100%;
+  margin: 0 10px;
+}
+
+.productList {
+  margin-top: 5vh;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+  .productList {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/*# sourceMappingURL=Products.module.css.map */

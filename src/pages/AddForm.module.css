@@ -1,0 +1,98 @@
+.form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.form p {
+  margin: 0;
+}
+.form__btn {
+  background: none;
+  border: none;
+}
+
+.rowContainer {
+  display: flex;
+  margin: 5px 0;
+  font-size: 24px;
+}
+.rowContainer__left {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.rowContainer__allRight {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.rowContainer__rightText input {
+  height: 50px;
+  width: 100%;
+  font-size: 24px;
+}
+.rowContainer__rightPrice input {
+  height: 50px;
+  width: 150px;
+  font-size: 24px;
+}
+.rowContainer__rightTextarea textarea {
+  resize: none;
+  height: 200px;
+  width: 100%;
+  font-size: 14px;
+}
+.rowContainer__rightUpload {
+  width: 300px;
+}
+.rowContainer__rightUpload input {
+  display: none;
+}
+
+.upload {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.upload__btn {
+  height: 100%;
+  width: 60px;
+}
+.upload__list {
+  height: 100%;
+  width: 240px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: auto;
+}
+.upload svg, .upload img {
+  height: 100%;
+  aspect-ratio: 1/1;
+  margin: 0 5px;
+}
+
+.error {
+  position: relative;
+  height: 30px;
+  width: 100%;
+}
+.error__text {
+  position: absolute;
+  height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .form {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=AddForm.module.css.map */

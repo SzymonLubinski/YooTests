@@ -1,0 +1,31 @@
+.btn {
+  font-size: 35px;
+  padding: 0.4em 1.2em;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgba(19, 26, 25, 0.85);
+  background: linear-gradient(to bottom left, rgba(19, 26, 25, 0.85) 50%, rgba(0, 0, 0, 0) 50.1%) top right, linear-gradient(to top right, rgba(19, 26, 25, 0.85) 50%, rgba(0, 0, 0, 0) 50.1%) bottom left;
+  background-repeat: no-repeat;
+  background-size: calc(0.7em + 6.5px) calc(0.7em + 6.5px);
+  box-shadow: 0 0 0 200px inset var(--s, rgba(0, 0, 0, 0)), 0 0 0 5px inset rgba(19, 26, 25, 0.85);
+  clip-path: polygon(0 0, calc(100% - 0.7em) 0, 100% 0.7em, 100% 100%, 0.7em 100%, 0 calc(100% - 0.7em));
+  transition: color var(--t, 0.3s), background-size 0.3s;
+}
+.btn:focus-visible {
+  outline-offset: -5px;
+  outline: 5px solid rgba(0, 0, 0, 0.8);
+  clip-path: none;
+  background-size: 0 0;
+}
+.btn:hover, .btn :active {
+  background-size: 100% 100%;
+  color: #fff;
+  --t: 0.2s 0.1s;
+}
+.btn:active {
+  --s: #0005;
+  transition: none;
+}
+
+/*# sourceMappingURL=NextBtn.module.css.map */

@@ -1,0 +1,118 @@
+
+.form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & p{
+    margin: 0;
+  }
+
+  &__btn{
+    background: none;
+    border: none;
+  }
+}
+
+.rowContainer {
+  display: flex;
+  margin: 5px 0;
+  font-size: 24px;
+
+  &__left{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__allRight{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__rightText{
+
+    & input{
+      height: 50px;
+      width: 100%;
+      font-size: 24px;
+    }
+  }
+
+  &__rightPrice{
+
+    & input{
+      height: 50px;
+      width: 150px;
+      font-size: 24px;
+    }
+  }
+
+  &__rightTextarea{
+
+    & textarea{
+      resize: none;
+      height: 200px;
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+
+  &__rightUpload{
+    width: 300px;
+
+    & input{
+      display: none;
+    }
+  }
+}
+
+.upload{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__btn{
+    height: 100%;
+    width: 60px;
+  }
+  &__list{
+    height: 100%;
+    width: 240px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+  }
+
+  & svg, img{
+    height: 100%;
+    aspect-ratio: 1/1;
+    margin: 0 5px;
+  }
+}
+
+.error{
+  position: relative;
+  height: 30px;
+  width: 100%;
+
+  &__text{
+    position: absolute;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form {
+    width: 100%;
+  }
+}
