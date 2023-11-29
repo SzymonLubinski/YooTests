@@ -9,14 +9,20 @@ const Cart = () => {
 
     return (
         <div className={styles.cart}>
-            <ul className={styles.cart__list}>
-                {cart.items.map((item) => (
-                    <CartItemComponent key={item.id} {...item}/>
-                ))}
-            </ul>
-            <div className={styles.cart__total}>
-                total price: <span>{cart.totalPrice.toFixed(2)}</span>
-            </div>
+            {cart.items.length > 0 ? (
+                <>
+                    <ul className={styles.cart__list}>
+                        {cart.items.map((item) => (
+                            <CartItemComponent key={item.id} {...item}/>
+                        ))}
+                    </ul>
+                    <div className={styles.cart__total}>
+                        total price: <span>{cart.totalPrice.toFixed(2)}</span>
+                    </div>
+                </>
+            ) : (
+                <p>There are no items</p>
+            )}
         </div>
     )
 }

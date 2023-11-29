@@ -5,6 +5,8 @@ import {FC, useState} from "react";
 import Step from "../components/Order/Step";
 import DeliveryAndPayment from "../components/Order/DeliveryAndPayment";
 import Summary from "../components/Order/Summary";
+import {useSelector} from "react-redux";
+import {RootState} from "../redux/store";
 
 const defaultSteps = [
     {num: 1, title: 'Cart'},
@@ -13,6 +15,7 @@ const defaultSteps = [
 ]
 
 const Order: FC = () => {
+    const items = useSelector((state: RootState) => state.cart.items);
     const [activeStep, setActiveStep] = useState(1);
     const [btnContent, setBtnContent] = useState<string>(defaultSteps[1].title)
     const nextStepHandle = () => {
@@ -60,7 +63,7 @@ const Order: FC = () => {
                     {activeStep === 1 && (
                         <NextBtn text={'Back to the list'} link={''}/>
                     )}
-                    {activeStep !== 3 && (
+                    {activeStep !== 3 && items.length > 0 && (
                         <NextBtn text={btnContent} onClickDef={() => nextStepHandle()}/>
                     )}
                 </div>
