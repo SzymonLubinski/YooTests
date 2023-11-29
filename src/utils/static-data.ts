@@ -8,7 +8,7 @@ export const staticData: Product[] = [
     {
         id: '1',
         name: 'nike',
-        images: [Picture4, Picture3, Picture1, Picture2],
+        images: [Picture4, Picture3, Picture1, Picture2, Picture1, Picture4],
         price: 23.99,
         description: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum'
     },

@@ -6,6 +6,7 @@ import {addToCart} from "../redux/cartSlice";
 import AddBtn from "../components/UI/AddBtn";
 import {staticData} from "../utils/static-data";
 import AmountController from "../components/UI/AmountController";
+import SwiperGallery from "../components/Swip/SwiperGallery";
 
 
 const Item: FC = () => {
@@ -34,44 +35,48 @@ const Item: FC = () => {
         dispatch(addToCart({amount: amount, ...data}));
     }
 
+
     return (
         <div className={styles.item}>
-            <div className={styles.item__img}>
-                <img src={data.images[index]} alt={''}/>
-                <div className={styles.tools}>
-                    <button className={styles.tools__btn} onClick={() => imageHandler(-1)}>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
-                            <path
-                                d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
-                        </svg>
-                    </button>
-                    <div className={styles.tools__dots}>
-                        <div className={styles.circles}>
-                            {Array.from({length: picturesNumber}, (v, i) => i).map((i) => {
-                                    const classes = (index === i) ?
-                                        `${styles.circles__inner} ${styles.circles__active}` :
-                                        styles.circles__inner;
-
-                                    return (
-                                        <div key={i}
-                                             className={classes}
-                                             onClick={() => setIndex(i)}
-                                        />
-                                    )
-                                }
-                            )}
-                        </div>
-                    </div>
-                    <button className={styles.tools__btn} onClick={() => imageHandler(1)}>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
-                            <path
-                                d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
-                        </svg>
-                    </button>
-                </div>
+            <div className={styles.item__gallery}>
+                <SwiperGallery images={data.images}/>
             </div>
+            {/*<div className={styles.item__img}>*/}
+            {/*    <img src={data.images[index]} alt={''}/>*/}
+            {/*    <div className={styles.tools}>*/}
+            {/*        <button className={styles.tools__btn} onClick={() => imageHandler(-1)}>*/}
+            {/*            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">*/}
+            {/*                <path*/}
+            {/*                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>*/}
+            {/*            </svg>*/}
+            {/*        </button>*/}
+            {/*        <div className={styles.tools__dots}>*/}
+            {/*            <div className={styles.circles}>*/}
+            {/*                {Array.from({length: picturesNumber}, (v, i) => i).map((i) => {*/}
+            {/*                        const classes = (index === i) ?*/}
+            {/*                            `${styles.circles__inner} ${styles.circles__active}` :*/}
+            {/*                            styles.circles__inner;*/}
+
+            {/*                        return (*/}
+            {/*                            <div key={i}*/}
+            {/*                                 className={classes}*/}
+            {/*                                 onClick={() => setIndex(i)}*/}
+            {/*                            />*/}
+            {/*                        )*/}
+            {/*                    }*/}
+            {/*                )}*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*        <button className={styles.tools__btn} onClick={() => imageHandler(1)}>*/}
+            {/*            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">*/}
+            {/*                <path*/}
+            {/*                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>*/}
+            {/*            </svg>*/}
+            {/*        </button>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             <div className={styles.item__info}>
-                <div className={styles.item__back}>
+                <div>
                     <Link to={`/`}>
                         Back to the list
                     </Link>

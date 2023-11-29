@@ -5,9 +5,10 @@ import {CartItem} from "../../types/db";
 import {useDispatch} from "react-redux";
 import {updateCart} from "../../redux/cartSlice";
 import {RoundPrice} from "../../utils/functions";
+import {Link} from "react-router-dom";
 
 
-const CartItemComponent:FC<CartItem> = (item) => {
+const CartItemComponent: FC<CartItem> = (item) => {
     const dispatch = useDispatch();
     const amountInputRef = useRef<HTMLInputElement>(null);
 
@@ -17,10 +18,14 @@ const CartItemComponent:FC<CartItem> = (item) => {
 
     return (
         <li className={styles.item}>
-            <section className={styles.item__main}>
-                <img src={item.images[0]} alt={item.id}/>
-                <h1>{item.name}</h1>
-            </section>
+            <Link to={`/el/${item.id}`}>
+                <section className={styles.item__main}>
+
+                    <img src={item.images[0]} alt={item.id}/>
+                    <h1>{item.name}</h1>
+
+                </section>
+            </Link>
             <section className={styles.item__amountAndPrice}>
                 <AmountController ref={amountInputRef}
                                   defaultValue={item.amount}

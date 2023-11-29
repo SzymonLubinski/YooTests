@@ -7,6 +7,11 @@
   margin-top: 10px;
   background: #94bbe9;
 
+  & a{
+    color: deeppink;
+    text-decoration: none;
+  }
+
   & section{
     height: 100%;
     display: flex;

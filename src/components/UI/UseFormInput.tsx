@@ -18,7 +18,6 @@ const UseFormInput:FC<UseFormInputProps> = (
 ) => {
     const [value, setValue] = useState<string>('')
     const [isActive, setIsActive] = useState<boolean>(false)
-    const inputRef = useRef();
     const [isFocused, setIsFocused] = useState<boolean>(false);
     const [wasVibrated, setWasVibrated] = useState(false);
     const isVibrationSupported = 'vibrate' in navigator;

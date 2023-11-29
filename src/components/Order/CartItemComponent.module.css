@@ -7,6 +7,10 @@
   margin-top: 10px;
   background: #94bbe9;
 }
+.item a {
+  color: deeppink;
+  text-decoration: none;
+}
 .item section {
   height: 100%;
   display: flex;
