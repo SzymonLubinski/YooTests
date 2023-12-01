@@ -1,87 +1,61 @@
 .item {
   width: 100%;
-  height: 100px;
+  height: 150px;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  margin-top: 10px;
-  background: #94bbe9;
+  padding: 5px;
+  border-bottom: 1px solid #242526;
 }
-.item a {
-  color: deeppink;
-  text-decoration: none;
+.item__leftSection {
+  height: 70%;
 }
-.item section {
+.item__leftSection img {
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.item__main h1 {
-  width: 250px;
-  font-size: 1em;
-  margin-left: 10px;
-}
-.item__main img {
-  width: 100px;
   aspect-ratio: 1/1;
 }
-.item__amountAndPrice {
-  margin-left: 10px;
+.item__rightSection {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.item__trash {
-  margin-left: auto;
-  margin-right: 10px;
-  width: 25px;
+.item__rightSection section {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
 }
-.item__trash svg {
-  width: 80%;
-  height: auto;
+.item__rightSection section a {
+  margin-top: auto;
+  text-align: left;
+  color: #282c34;
+  text-decoration: none;
+}
+.item__rightSection section a h1 {
+  white-space: nowrap;
+  width: 60vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item__rightSection section p {
+  margin: 0;
+}
+.item__rightSection section p svg {
+  height: 15px;
 }
 
 .prices {
-  margin-left: 10px;
-  text-align: right;
+  margin-top: auto;
 }
 .prices p {
+  text-align: right;
   margin: 0;
 }
 .prices__total {
   font-size: 1.5em;
 }
-.prices__retail {
-  font-size: 0.8em;
-}
 
-@media screen and (max-width: 600px) {
-  .item {
-    height: 150px;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 5px;
-  }
-  .item section {
-    width: 100%;
-    justify-content: space-between;
-  }
-  .item__main {
-    justify-content: flex-start !important;
-  }
-  .item__main h1 {
-    width: auto;
-    text-align: left;
-  }
-  .item__main img {
-    width: 80px;
-    aspect-ratio: 1/1;
-  }
-  .item__amountAndPrice {
-    margin-left: 0;
-  }
-  .item__trash {
-    display: none !important;
-  }
-}
 @keyframes trash {
   0% {
     width: 30%;

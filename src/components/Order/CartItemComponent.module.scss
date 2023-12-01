@@ -1,99 +1,68 @@
 .item{
   width: 100%;
-  height: 100px;
+  height: 150px;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  margin-top: 10px;
-  background: #94bbe9;
+  padding: 5px;
+  border-bottom: 1px solid #242526;
 
-  & a{
-    color: deeppink;
-    text-decoration: none;
-  }
-
-  & section{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &__main{
-
-    & h1{
-      width: 250px;
-      font-size: 1em;
-      margin-left: 10px;
-    }
+  &__leftSection{
+    height: 70%;
 
     & img{
-      width: 100px;
+      height: 100%;
       aspect-ratio: 1/1;
     }
   }
-  &__amountAndPrice{
-    margin-left: 10px;
-  }
 
-  &__trash{
-    margin-left: auto;
-    margin-right: 10px;
-    width: 25px;
+  &__rightSection{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 
-    & svg{
-      width: 80%;
-      height: auto;
+    & section{
+      width: 100%;
+      height: 50%;
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+      & a{
+        margin-top: auto;
+        text-align: left;
+        color: #282c34;
+        text-decoration: none;
+
+        & h1{
+          white-space: nowrap;
+          width: 60vw;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      & p{
+        margin: 0;
+        & svg{
+          height: 15px;
+        }
+      }
     }
   }
 }
 .prices{
-  margin-left: 10px;
-  text-align: right;
-
+  margin-top: auto;
   & p{
+    text-align: right;
     margin: 0;
-  }
-
+    }
   &__total{
     font-size: 1.5em;
-  }
-  &__retail{
-    font-size: 0.8em;
   }
 }
 
 @media screen and (max-width: 600px) {
   .item{
-    height: 150px;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 5px;
 
-    & section{
-      width: 100%;
-      justify-content: space-between;
-    }
-
-    &__main{
-      justify-content: flex-start !important;
-
-      & h1{
-        width: auto;
-        text-align: left;
-      }
-
-      & img{
-        width: 80px;
-        aspect-ratio: 1/1;
-      }
-    }
-    &__amountAndPrice{
-      margin-left: 0;
-    }
-    &__trash{
-      display: none!important;
-    }
   }
 }
 

@@ -2,9 +2,10 @@ import {useSelector} from "react-redux";
 import {RootState} from "../../redux/store";
 import CartItemComponent from "./CartItemComponent";
 import styles from './Cart.module.scss';
+import {FC} from "react";
 
 
-const Cart = () => {
+const Cart:FC = () => {
     const cart = useSelector((state: RootState) => state.cart);
 
     return (

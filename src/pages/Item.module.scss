@@ -7,100 +7,50 @@
   width: 100vw;
   display: flex;
   align-items: flex-start;
-
+  &__back{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    background: #242526;
+    border-radius: 50%;
+    &:hover{
+      background: #393a3b;
+    }
+    & a{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    & svg{
+      width: 50%;
+      height: 50%;
+    }
+  }
   &__gallery{
     width: calc(100% - 400px);
     height: 100%;
   }
-
-  //&__img {
-  //  position: relative;
-  //  height: 100%;
-  //  width: 100%;
-  //  display: flex;
-  //  justify-content: center;
-  //  overflow: hidden;
-  //  background: rgba(91,91,91, 0.3);
-  //
-  //  & img {
-  //    position: relative;
-  //    width: 100%;
-  //    object-fit: scale-down;
-  //  }
-  //}
-
-  &__info {
-    width: 400px;
-    margin-top: 150px;
-  }
 }
-.tools {
-  position: absolute;
+
+.itemInfo{
+  background: #242526;
+  width: 400px;
   height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-
-  &__btn {
-    padding: 0 20px;
-    border: none;
-    background: rgba(91,91,91, 0.3);
-    cursor: pointer;
-
-    &:hover {
-      background: rgba(91,91,91, 0.7);
+  color: #e4e6eb;
+  padding: 150px 10px 0 10px;
+  &__price{
+    font-size: 2em;
+  }
+  &__btn{
+    width: 200px;
+    margin: 0 auto;
+    & button{
+      padding: 10px 0;
     }
-  }
-
-  &__dots {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-  }
-}
-
-.circles {
-  display: flex;
-
-  &__inner {
-    margin: 10px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 3px solid rgba(19, 26, 25, 0.8);
-    background: white;
-    cursor: pointer;
-  }
-
-  &__active {
-    background: #94bbe9;
-  }
-}
-
-.add {
-  display: flex;
-  justify-content: center;
-  width: 200px;
-  margin: 20px auto;
-  background: rgba(19, 26, 25, 0.8);
-
-  &__amountHandler {
-    width: 100%;
-    height: 50%;
-
-    &:hover {
-      background: #61dafb;
-    }
-  }
-
-  &__btn {
-    width: 50%;
-  }
-
-  &__price {
-    width: 50%;
-    color: goldenrod;
-    font-size: 24px;
   }
 }
 
@@ -108,177 +58,16 @@
   .item {
     flex-direction: column;
     position: relative;
-    height: 100%;
+    background: #242526;
+    height: calc(100vh - 100px);
 
     &__gallery{
       width: 100%;
       height: 50%;
     }
-
-    &__img{
-      width: 100%;
-      aspect-ratio: 1/1;
-    }
-    &__info {
-      width: 100%;
-      margin-top: 0;
-    }
+  }
+  .itemInfo{
+    width: 100%;
+    padding-top: 20px;
   }
 }
-
-
-
-
-//.item {
-//  height: 100%;
-//  width: 100%;
-//  display: flex;
-//  flex-direction: column;
-//  align-items: center;
-//
-//  &__back{
-//    display: flex;
-//    justify-content: center;
-//    align-items: center;
-//    margin: 10px 0;
-//
-//    & a{
-//      color: white;
-//      background: rgba(19, 26, 25, 0.5);
-//      padding: 15px;
-//      border-radius: 20px;
-//
-//      &:hover{
-//        background: rgba(19, 26, 25, 0.8);
-//      }
-//    }
-//    & a{
-//      font-size: 24px;
-//      text-decoration: none;
-//    }
-//  }
-//
-//  &__img {
-//    position: relative;
-//    height: 400px;
-//    width: 600px;
-//    display: flex;
-//    justify-content: center;
-//    overflow: hidden;
-//    background: white;
-//
-//    & img {
-//      position: relative;
-//      //height: 100%;
-//      width: 100%;
-//      object-fit: scale-down;
-//    }
-//  }
-//
-//  &__info {
-//    margin: 20px 0;
-//  }
-//}
-//
-//.tools {
-//  position: absolute;
-//  height: 400px;
-//  width: 100%;
-//  display: flex;
-//  justify-content: space-between;
-//
-//  &__btn {
-//    padding: 0 20px;
-//    border: none;
-//    background: rgba(91,91,91, 0.3);
-//    cursor: pointer;
-//
-//    &:hover {
-//      background: rgba(91,91,91, 0.7);
-//    }
-//  }
-//
-//  &__dots {
-//    display: flex;
-//    align-items: flex-end;
-//    justify-content: center;
-//  }
-//}
-//
-//.circles {
-//  display: flex;
-//
-//  &__inner {
-//    margin: 10px;
-//    width: 20px;
-//    height: 20px;
-//    border-radius: 50%;
-//    border: 3px solid rgba(19, 26, 25, 0.8);
-//    background: white;
-//    cursor: pointer;
-//  }
-//
-//  &__active {
-//    background: #94bbe9;
-//  }
-//}
-//
-//.add {
-//  display: flex;
-//  justify-content: center;
-//  width: 200px;
-//  margin: 20px auto;
-//  background: rgba(19, 26, 25, 0.8);
-//
-//  &__amountHandler {
-//    width: 100%;
-//    height: 50%;
-//
-//    &:hover {
-//      background: #61dafb;
-//    }
-//  }
-//
-//  &__btn {
-//    width: 50%;
-//  }
-//
-//  &__price {
-//    width: 50%;
-//    color: goldenrod;
-//    font-size: 24px;
-//  }
-//}
-//
-//@media screen and (max-width: 600px) {
-//  .item {
-//    &__info {
-//      margin: 5px 0;
-//
-//      & p{
-//        margin: 3px;
-//      }
-//    }
-//    &__img {
-//      position: relative;
-//      display: flex;
-//      justify-content: center;
-//      overflow: hidden;
-//      width: 100%;
-//      height: auto;
-//
-//      & img {
-//        position: absolute;
-//        width: 100%;
-//        height: 100%;
-//      }
-//    }
-//  }
-//  .tools {
-//    position: relative;
-//    height: auto;
-//    display: flex;
-//    justify-content: space-between;
-//
-//  }
-//}

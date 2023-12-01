@@ -2,11 +2,12 @@
 .btn{
   width: 100%;
   height: 100%;
-  background: rgba(200,38,71,0.8);
-  color: white;
+  background: #242526;
+  color: rgb(228, 230, 235);
   font-size: 24px;
+  cursor: pointer;
 
   &:hover{
-    background: rgba(200,38,71,1);
+    background: #393a3b;
   }
 }

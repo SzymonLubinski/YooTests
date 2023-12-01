@@ -19,12 +19,11 @@
 }
 
 .header{
-  height: 10vh;
+  height: 100px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: black;
   padding-left: 50px;
   padding-right: 50px;
 
@@ -41,14 +40,7 @@
       width: 20vw;
       height: 100%;
       object-fit: scale-down;
-
     }
-  }
-
-  &__link{
-    padding: 5px;
-    text-decoration: none;
-    color: white;
   }
 }
 
@@ -56,7 +48,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid black;
+  border: 1px solid black;
   min-width: 100px;
   height: 50px;
   position: absolute;

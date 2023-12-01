@@ -1,7 +1,7 @@
 
 import {FC} from "react";
 import styles from './Products.module.scss'
-import Card from "../components/Card";
+import Card from "../components/Card/Card";
 import {staticData} from "../utils/static-data";
 
 

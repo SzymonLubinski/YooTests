@@ -5,9 +5,11 @@ import {DeliveryAddress} from "../../types/db";
 import {useDispatch} from "react-redux";
 import {updateAddress} from "../../redux/orderSlice";
 import styles from './DeliveryAndPayment.module.scss';
+import {OrderStepProps} from "../../types/custom-types";
+import NextBtn from "../UI/NextBtn";
 
 
-const DeliveryAndPayment:FC = () => {
+const DeliveryAndPayment:FC<OrderStepProps> = ({stepHandler}) => {
     const dispatch = useDispatch();
     const {
         register,
@@ -15,7 +17,8 @@ const DeliveryAndPayment:FC = () => {
         formState: { errors }
     } = useForm();
     const onSubmit: SubmitHandler<DeliveryAddress> = (data) => {
-        dispatch(updateAddress(data))
+        dispatch(updateAddress(data));
+        stepHandler();
     }
 
 
@@ -82,8 +85,7 @@ const DeliveryAndPayment:FC = () => {
 
                 </div>
                 <div className={styles.form__btnContainer}>
-                    <label htmlFor={'sub'}>Send</label>
-                    <input id={'sub'} type={'submit'}/>
+                    <NextBtn text={'Summary'} type={'submit'}/>
                 </div>
             </form>
         </div>

@@ -7,93 +7,66 @@
   display: flex;
   align-items: flex-start;
 }
+.item__back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  background: #242526;
+  border-radius: 50%;
+}
+.item__back:hover {
+  background: #393a3b;
+}
+.item__back a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item__back svg {
+  width: 50%;
+  height: 50%;
+}
 .item__gallery {
   width: calc(100% - 400px);
   height: 100%;
 }
-.item__info {
+
+.itemInfo {
+  background: #242526;
   width: 400px;
-  margin-top: 150px;
-}
-
-.tools {
-  position: absolute;
   height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  color: #e4e6eb;
+  padding: 150px 10px 0 10px;
 }
-.tools__btn {
-  padding: 0 20px;
-  border: none;
-  background: rgba(91, 91, 91, 0.3);
-  cursor: pointer;
+.itemInfo__price {
+  font-size: 2em;
 }
-.tools__btn:hover {
-  background: rgba(91, 91, 91, 0.7);
-}
-.tools__dots {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.circles {
-  display: flex;
-}
-.circles__inner {
-  margin: 10px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 3px solid rgba(19, 26, 25, 0.8);
-  background: white;
-  cursor: pointer;
-}
-.circles__active {
-  background: #94bbe9;
-}
-
-.add {
-  display: flex;
-  justify-content: center;
+.itemInfo__btn {
   width: 200px;
-  margin: 20px auto;
-  background: rgba(19, 26, 25, 0.8);
+  margin: 0 auto;
 }
-.add__amountHandler {
-  width: 100%;
-  height: 50%;
-}
-.add__amountHandler:hover {
-  background: #61dafb;
-}
-.add__btn {
-  width: 50%;
-}
-.add__price {
-  width: 50%;
-  color: goldenrod;
-  font-size: 24px;
+.itemInfo__btn button {
+  padding: 10px 0;
 }
 
 @media screen and (max-width: 600px) {
   .item {
     flex-direction: column;
     position: relative;
-    height: 100%;
+    background: #242526;
+    height: calc(100vh - 100px);
   }
   .item__gallery {
     width: 100%;
     height: 50%;
   }
-  .item__img {
+  .itemInfo {
     width: 100%;
-    aspect-ratio: 1/1;
-  }
-  .item__info {
-    width: 100%;
-    margin-top: 0;
+    padding-top: 20px;
   }
 }
 

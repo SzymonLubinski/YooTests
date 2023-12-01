@@ -1,40 +1,43 @@
 import {FC} from "react";
-import styles from './NextBtn.module.scss';
 import {Link} from "react-router-dom";
+import styles from './NextBtn.module.scss';
 
 
 interface NextBtnProps {
     text: string;
     onClickDef?: () => void;
     link?: string;
+    type?: 'submit' | 'button';
 }
 
 
-const NextBtn: FC<NextBtnProps> = ({text, onClickDef, link}) => {
-    if (onClickDef) {
+const NextBtn: FC<NextBtnProps> = ({text, onClickDef, link, type}) => {
+    const isDef = onClickDef ? onClickDef : undefined;
+    if (link){
         return (
             <div>
-                <button className={styles.btn}
-                        onClick={onClickDef}
-                        style={{
-                            color: "#cdffd8",
+                <Link to={link}>
+                    <button className={styles.btn}
+                            type={type ? type : 'button'}
+                            style={{
+                                color: "#242526",
 
-                        }}>{text}
-                </button>
+                            }}>{text}
+                    </button>
+                </Link>
             </div>
         )
     }
-
     return (
         <div>
-            <Link to={`/${link}`}>
-                <button className={styles.btn}
-                        style={{
-                            color: "#cdffd8",
+            <button className={styles.btn}
+                    type={type ? type : 'button'}
+                    onClick={isDef}
+                    style={{
+                        color: "#242526",
 
-                        }}>{text}
-                </button>
-            </Link>
+                    }}>{text}
+            </button>
         </div>
     )
 }

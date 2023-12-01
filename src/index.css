@@ -9,8 +9,7 @@ body {
   font-family: Inter,Helvetica,Arial,system-ui,-apple-system;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(205,255,216);
-  background: linear-gradient(90deg, rgba(205,255,216,1) 0%, rgba(148,185,255,1) 100%);
+  background: #E5E5E5;
 }
 
 code {
