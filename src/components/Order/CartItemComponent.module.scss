@@ -35,7 +35,7 @@
 
         & h1{
           white-space: nowrap;
-          width: 60vw;
+          width: 100%;
           overflow: hidden;
           text-overflow: ellipsis;
         }
@@ -62,7 +62,15 @@
 
 @media screen and (max-width: 600px) {
   .item{
-
+    &__rightSection{
+      & section{
+        & a{
+          & h1{
+            width: 60vw;
+          }
+        }
+      }
+    }
   }
 }
 

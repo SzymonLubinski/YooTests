@@ -34,7 +34,7 @@
 }
 .item__rightSection section a h1 {
   white-space: nowrap;
-  width: 60vw;
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -56,6 +56,11 @@
   font-size: 1.5em;
 }
 
+@media screen and (max-width: 600px) {
+  .item__rightSection section a h1 {
+    width: 60vw;
+  }
+}
 @keyframes trash {
   0% {
     width: 30%;
