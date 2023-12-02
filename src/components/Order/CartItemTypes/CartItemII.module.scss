@@ -1,0 +1,63 @@
+.item {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid #242526;
+
+  & section {
+
+  }
+
+  &__imgSection {
+    height: 100%;
+    padding: 10px;
+
+    & img {
+      height: 100%;
+      aspect-ratio: 1/1;
+    }
+  }
+
+  &__titleSection {
+    width: 40%;
+    & a{
+      text-decoration: none;
+      & h1 {
+        color: #242526;
+        font-family: IBM Plex Sans, serif;
+        font-size: 1em;
+      }
+    }
+
+  }
+
+  &__inputSection {
+
+  }
+
+  &__priceSection{
+    width: 100px;
+    text-align: center;
+  }
+
+  &__trashSection {
+    margin-left: auto;
+    margin-bottom: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .item {
+
+  }
+}
+
+@keyframes trash {
+  0% {
+    width: 30%;
+  }
+  100% {
+    width: 40%;
+  }
+}

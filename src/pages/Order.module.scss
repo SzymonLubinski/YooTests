@@ -1,5 +1,17 @@
-.center{
-  width: 90%;
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__back{
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+
+    & svg{
+      height: 100%;
+      width: auto;
+    }
+  }
 }
 
 .nav{
@@ -9,51 +21,63 @@
   justify-content: space-evenly;
   align-items: center;
 }
-
-.container{
-  display: flex;
+.order{
   width: 100%;
-
-  &__order{
-    width: 70%;
-  }
-
-  &__next{
+  &__1step{
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 30%;
-    margin: 10px;
+    align-items: flex-start;
+  }
+  &__borderLeft{
+    margin: 20px;
+    height: auto;
+    width: 400px;
+  }
+  &__sum{
+    width: 100%;
+    margin: 0 auto 30px auto;
+    padding: 10px;
+    border: 1px solid #242526;
+    & p{
+      margin: 5px 0;
+    }
+  }
+  &__priceInfo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__priceSum{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #242526;
+  }
+  &__2step{
+
+  }
+  &__btn{
+    width: 100%;
+    & button{
+      width: 100%;
+    }
   }
 }
 
 @media screen and (max-width: 600px) {
-  .center{
-    width: 100%;
-  }
-  .container{
-    flex-direction: column;
-
-    &__order {
-      width: 100%;
+  .order {
+    margin: 20px 0;
+    &__1step {
+      flex-direction: column;
     }
-    &__next{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      gap: 0;
+    &__borderLeft{
+      border: none;
+      width: 80%;
+      margin: 20px auto;
+    }
+    &__sum{
       width: 100%;
-      margin: 0;
+      margin: 10px 0;
 
-      & div{
-        width: 50%;
-        margin: 5px;
-      }
-
-      & button {
-        color: black !important;
-        font-size: 18px;
-      }
     }
   }
 }

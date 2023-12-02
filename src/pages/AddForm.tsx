@@ -14,63 +14,12 @@ type IFormInput = {
 const AddForm = () => {
     const {register, handleSubmit, formState: {errors}, watch} = useForm<IFormInput>();
     const watchImages = watch('images');
-
+    const value: IFormInput = watch();
     const onSubmit: SubmitHandler<IFormInput> = async (data) => {
         console.log(data)
     }
     return (
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-            {/*<div className={styles.rowContainer}>*/}
-            {/*<section className={styles.rowContainer__left}>*/}
-            {/*    <label htmlFor={'name'}>product name</label>*/}
-            {/*</section>*/}
-            {/*<section className={styles.rowContainer__rightText}>*/}
-            {/*    <div className={styles.rowContainer__allRight}>*/}
-            {/*        <input id={'name'} type={'text'} {...register('name', {*/}
-            {/*            required: true, minLength: 3, maxLength: 50,*/}
-            {/*        })}/>*/}
-            {/*        <div className={styles.error}>*/}
-            {/*            {errors.name?.type === 'required' && (*/}
-            {/*                <p className={styles.error__text}>missing value</p>*/}
-            {/*            )}*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</section>*/}
-            {/*</div>*/}
-            {/*<div className={styles.rowContainer}>*/}
-            {/*    <section className={styles.rowContainer__left}>*/}
-            {/*        <label htmlFor={'price'}>product price</label>*/}
-            {/*    </section>*/}
-            {/*    <section className={styles.rowContainer__rightPrice}>*/}
-            {/*        <div className={styles.rowContainer__allRight}>*/}
-            {/*            <input id={'price'} type={'number'} step={0.01} {...register('price', {*/}
-            {/*                required: true, min: 0.01, max: 9999*/}
-            {/*            })}/>*/}
-            {/*            <div className={styles.error}>*/}
-            {/*                {errors.price?.type === 'required' && (*/}
-            {/*                    <p className={styles.error__text}>missing value</p>*/}
-            {/*                )}*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </section>*/}
-            {/*</div>*/}
-            {/*<div className={styles.rowContainer}>*/}
-            {/*    <section className={styles.rowContainer__left}>*/}
-            {/*        <label htmlFor={'description'}>product description</label>*/}
-            {/*    </section>*/}
-            {/*    <section className={styles.rowContainer__rightTextarea}>*/}
-            {/*        <div className={styles.rowContainer__allRight}>*/}
-            {/*            <textarea id={'description'} {...register('description', {*/}
-            {/*                required: true, minLength: 3, maxLength: 150,*/}
-            {/*            })}/>*/}
-            {/*            <div className={styles.error}>*/}
-            {/*                {errors.description?.type === 'required' && (*/}
-            {/*                    <p className={styles.error__text}>missing value</p>*/}
-            {/*                )}*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </section>*/}
-            {/*</div>*/}
             <UseFormInput id={'1'}
                           label={'product name'}
                           type={'text'}
@@ -79,6 +28,7 @@ const AddForm = () => {
                           required
                           errors={errors.name}
                           errorMessage={'missing property'}
+                          value={value.name}
             />
             <UseFormInput id={'2'}
                           label={'product price'}
@@ -88,6 +38,7 @@ const AddForm = () => {
                           required
                           errors={errors.price}
                           errorMessage={'missing property'}
+                          value={value.price}
             />
 
             <UseFormInput id={'3'}
@@ -98,6 +49,7 @@ const AddForm = () => {
                           required
                           errors={errors.description}
                           errorMessage={'missing property'}
+                          value={value.description}
             />
             <div className={styles.rowContainer}>
                 <section className={styles.rowContainer__left}>

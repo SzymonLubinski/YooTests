@@ -1,34 +1,61 @@
 .container{
   width: 100%;
+  & h1{
+    text-align: center;
+  }
 }
 
 .form{
   width: 100%;
-  margin: 0 auto;
-  padding: 10px;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  margin-top: 30px;
 
-  &__btnContainer{
-    height: 40px;
-    margin-top: 20px;
-    & label{
-      font-size: 18px;
-      color: goldenrod;
-      border: 2px solid goldenrod;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-    & input{
-      display: none;
+  &__inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin: 0 10px
+  }
+
+  &__submit{
+    width: 400px;
+    margin: 10px;
+  }
+  &__terms{
+    padding: 10px;
+    margin: 0 auto 30px auto;
+    border: 1px solid #242526;
+  }
+  &__btn{
+    width: 100%;
+    & button{
+      width: 100%;
     }
   }
 }
-
 .payment{
-  height: 300px;
+  height: 200px;
   width: 100%;
   margin-top: 10px;
   border: 1px solid black;
+}
+
+@media screen and (max-width: 600px) {
+  .form{
+    flex-direction: column;
+
+    &__inputs{
+      margin: 0 auto;
+    }
+    &__submit{
+      width: 80%;
+      margin: 0 auto;
+      border: none;
+    }
+    &__terms{
+      width: 100%;
+      margin: 20px auto;
+    }
+  }
 }

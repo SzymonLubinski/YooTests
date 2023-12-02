@@ -1,5 +1,5 @@
 import styles from './UseFormInput.module.scss';
-import {FC, useRef, useState} from "react";
+import {FC, useEffect, useState} from "react";
 
 
 interface UseFormInputProps{
@@ -11,23 +11,33 @@ interface UseFormInputProps{
     required: boolean;
     errors: any;
     errorMessage: string;
+    value: number| string | undefined;
 }
 
 const UseFormInput:FC<UseFormInputProps> = (
-    {label, type, name, register, required, errors, errorMessage}
+    {label, type, name, register, required, errors, errorMessage, value}
 ) => {
-    const [value, setValue] = useState<string>('')
-    const [isActive, setIsActive] = useState<boolean>(false)
-    const [isFocused, setIsFocused] = useState<boolean>(false);
     const [wasVibrated, setWasVibrated] = useState(false);
+    const [showLabel, setShowLabel] = useState(true);
+
+    useEffect(() => {
+        if (!value){
+            setShowLabel(true);
+        }
+        if (typeof value === 'string' && value.length === 0){
+            setShowLabel(true);
+        }
+        if (typeof value === 'string' && value.length > 0){
+            setShowLabel(false);
+        }
+        if (typeof value === 'number'){
+            setShowLabel(false);
+        }
+
+    }, [value]);
+
     const isVibrationSupported = 'vibrate' in navigator;
-
-    let fieldClassName = styles.field;
-
-    if (isActive || value) {
-        fieldClassName += ` ${styles.active}`;
-    }
-
+    let fieldClassName = `${styles.field} ${styles.active}`;
     if (errors) {
         fieldClassName += ` ${styles.error}`;
         if (!wasVibrated) {
@@ -38,17 +48,16 @@ const UseFormInput:FC<UseFormInputProps> = (
         }
     }
 
-    const focusedStyles = isFocused ? '' : styles.opacity;
-    const labelStyles = errors ? `${styles.error} ${focusedStyles}` : focusedStyles;
-
     return (
         <div className={fieldClassName}>
             <input type={type}
                    {...register(name, {required})}
             />
-            <label className={labelStyles}>
-                {required ? "*" : ""}{label}{errors ? " - " + errorMessage : ""}
-            </label>
+            {showLabel && (
+                <label className={styles.lab}>
+                    {required ? "*" : ""}{label}{errors ? " - " + errorMessage : ""}
+                </label>
+            )}
         </div>
     )
 }

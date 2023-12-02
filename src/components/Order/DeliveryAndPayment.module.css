@@ -1,35 +1,61 @@
 .container {
   width: 100%;
 }
+.container h1 {
+  text-align: center;
+}
 
 .form {
   width: 100%;
-  margin: 0 auto;
-  padding: 10px;
+  display: flex;
+  margin-top: 30px;
+}
+.form__inputs {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
+  margin: 0 10px;
 }
-.form__btnContainer {
-  height: 40px;
-  margin-top: 20px;
+.form__submit {
+  width: 400px;
+  margin: 10px;
 }
-.form__btnContainer label {
-  font-size: 18px;
-  color: goldenrod;
-  border: 2px solid goldenrod;
-  padding: 10px 20px;
-  cursor: pointer;
+.form__terms {
+  padding: 10px;
+  margin: 0 auto 30px auto;
+  border: 1px solid #242526;
 }
-.form__btnContainer input {
-  display: none;
+.form__btn {
+  width: 100%;
+}
+.form__btn button {
+  width: 100%;
 }
 
 .payment {
-  height: 300px;
+  height: 200px;
   width: 100%;
   margin-top: 10px;
   border: 1px solid black;
+}
+
+@media screen and (max-width: 600px) {
+  .form {
+    flex-direction: column;
+  }
+  .form__inputs {
+    margin: 0 auto;
+  }
+  .form__submit {
+    width: 80%;
+    margin: 0 auto;
+    border: none;
+  }
+  .form__terms {
+    width: 100%;
+    margin: 20px auto;
+  }
 }
 
 /*# sourceMappingURL=DeliveryAndPayment.module.css.map */

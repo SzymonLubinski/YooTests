@@ -6,10 +6,11 @@
 
 body {
   margin: 0;
-  font-family: Inter,Helvetica,Arial,system-ui,-apple-system;
+  /*font-family: Inter,Helvetica,Arial,system-ui,-apple-system;*/
+  font-family: IBM Plex Sans, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #E5E5E5;
+  background: white;
 }
 
 code {

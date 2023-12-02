@@ -1,5 +1,15 @@
-.center {
-  width: 90%;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container__back {
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+}
+.container__back svg {
+  height: 100%;
+  width: auto;
 }
 
 .nav {
@@ -10,46 +20,60 @@
   align-items: center;
 }
 
-.container {
-  display: flex;
+.order {
   width: 100%;
 }
-.container__order {
-  width: 70%;
-}
-.container__next {
+.order__1step {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 30%;
-  margin: 10px;
+  align-items: flex-start;
+}
+.order__borderLeft {
+  margin: 20px;
+  height: auto;
+  width: 400px;
+}
+.order__sum {
+  width: 100%;
+  margin: 0 auto 30px auto;
+  padding: 10px;
+  border: 1px solid #242526;
+}
+.order__sum p {
+  margin: 5px 0;
+}
+.order__priceInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.order__priceSum {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #242526;
+}
+.order__btn {
+  width: 100%;
+}
+.order__btn button {
+  width: 100%;
 }
 
 @media screen and (max-width: 600px) {
-  .center {
-    width: 100%;
+  .order {
+    margin: 20px 0;
   }
-  .container {
+  .order__1step {
     flex-direction: column;
   }
-  .container__order {
+  .order__borderLeft {
+    border: none;
+    width: 80%;
+    margin: 20px auto;
+  }
+  .order__sum {
     width: 100%;
-  }
-  .container__next {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 0;
-    width: 100%;
-    margin: 0;
-  }
-  .container__next div {
-    width: 50%;
-    margin: 5px;
-  }
-  .container__next button {
-    color: black !important;
-    font-size: 18px;
+    margin: 10px 0;
   }
 }
 

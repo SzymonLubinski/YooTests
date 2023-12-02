@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
+  height: 30px;
 }
 .divInput input::-webkit-outer-spin-button,
 .divInput input::-webkit-inner-spin-button {
@@ -18,7 +18,7 @@
 }
 .divInput__button {
   height: 100%;
-  width: 50px;
+  width: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,9 +29,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  .divInput {
-    height: 30px;
-  }
   .divInput input::-webkit-outer-spin-button,
   .divInput input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -39,11 +36,8 @@
   }
   .divInput input[type=number] {
     height: 100%;
-    font-size: 24px;
-    width: 50px;
-  }
-  .divInput__button {
-    width: 30px;
+    font-size: 20px;
+    width: 40px;
   }
 }
 

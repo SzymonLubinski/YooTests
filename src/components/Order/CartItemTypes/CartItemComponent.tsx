@@ -1,10 +1,10 @@
 import {FC, useRef} from "react";
 import {Link} from "react-router-dom";
 import {useDispatch} from "react-redux";
-import AmountController from "../UI/AmountController";
-import {CartItem} from "../../types/db";
-import {updateCart} from "../../redux/cartSlice";
-import {RoundPrice} from "../../utils/functions";
+import AmountController from "../../UI/AmountController";
+import {CartItem} from "../../../types/db";
+import {updateCart} from "../../../redux/cartSlice";
+import {RoundPrice} from "../../../utils/functions";
 import styles from './CartItemComponent.module.scss';
 
 

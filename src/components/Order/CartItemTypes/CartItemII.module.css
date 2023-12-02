@@ -1,0 +1,45 @@
+.item {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid #242526;
+}
+.item__imgSection {
+  height: 100%;
+  padding: 10px;
+}
+.item__imgSection img {
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+.item__titleSection {
+  width: 40%;
+}
+.item__titleSection a {
+  text-decoration: none;
+}
+.item__titleSection a h1 {
+  color: #242526;
+  font-family: IBM Plex Sans, serif;
+  font-size: 1em;
+}
+.item__priceSection {
+  width: 100px;
+  text-align: center;
+}
+.item__trashSection {
+  margin-left: auto;
+  margin-bottom: auto;
+}
+
+@keyframes trash {
+  0% {
+    width: 30%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+
+/*# sourceMappingURL=CartItemII.module.css.map */

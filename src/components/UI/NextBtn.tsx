@@ -13,32 +13,28 @@ interface NextBtnProps {
 
 const NextBtn: FC<NextBtnProps> = ({text, onClickDef, link, type}) => {
     const isDef = onClickDef ? onClickDef : undefined;
-    if (link){
+    if (link) {
         return (
-            <div>
-                <Link to={link}>
-                    <button className={styles.btn}
-                            type={type ? type : 'button'}
-                            style={{
-                                color: "#242526",
+            <Link to={link}>
+                <button className={styles.btn}
+                        type={type ? type : 'button'}
+                        style={{
+                            color: "#242526",
 
-                            }}>{text}
-                    </button>
-                </Link>
-            </div>
+                        }}>{text}
+                </button>
+            </Link>
         )
     }
     return (
-        <div>
-            <button className={styles.btn}
-                    type={type ? type : 'button'}
-                    onClick={isDef}
-                    style={{
-                        color: "#242526",
+        <button className={styles.btn}
+                type={type ? type : 'button'}
+                onClick={isDef}
+                style={{
+                    color: "#242526",
 
-                    }}>{text}
-            </button>
-        </div>
+                }}>{text}
+        </button>
     )
 }
 

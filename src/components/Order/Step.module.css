@@ -5,7 +5,7 @@
   font-weight: bold;
   width: 25%;
   height: 80px;
-  opacity: 0.5;
+  opacity: 0.3;
   border-bottom: 3px solid black;
 }
 .step__title {
@@ -27,8 +27,8 @@
 }
 
 .active {
-  color: deeppink;
-  border-color: deeppink;
+  color: #242526;
+  border-color: #242526;
   opacity: 1;
 }
 
